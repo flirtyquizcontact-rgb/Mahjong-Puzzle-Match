@@ -15,6 +15,28 @@
 .card:hover{transform:translateY(-4px);box-shadow:0 24px 70px rgba(0,0,0,.35)}
 .button:focus-visible,.nav-links a:focus-visible{outline:3px solid #ffe08a;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important;transform:none!important}}
+
+/* Original Google Play screenshots gallery: responsive, keyboard and touch accessible */
+.qfs-gallery{--qfs-glow:#88e5fa;clear:both;width:100%;max-width:100%;min-width:0;margin:46px 0 58px;padding:clamp(19px,3vw,30px);background:linear-gradient(150deg,rgba(25,34,58,.79),rgba(12,18,35,.82));border:1px solid rgba(193,205,244,.2);border-radius:23px;box-shadow:0 15px 42px rgba(0,0,0,.15);color:#f4f8ff;text-align:left}
+.qfs-gallery *{box-sizing:border-box}
+.qfs-gallery-top{display:flex;gap:15px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;margin-bottom:18px}
+.qfs-gallery-label{display:block;color:var(--qfs-glow);font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;font-weight:850;margin-bottom:7px}
+.qfs-gallery h2{font-size:clamp(1.42rem,2.8vw,2.1rem);line-height:1.2;letter-spacing:-.03em;margin:0 0 10px;color:#fff}
+.qfs-gallery-description{margin:0;color:#c4cede;font-size:.94rem;max-width:690px;line-height:1.7}
+.qfs-gallery-controls{display:flex;gap:9px;flex-shrink:0}
+.qfs-gallery button{appearance:none;cursor:pointer;width:43px;height:43px;border:1px solid rgba(210,226,255,.3);border-radius:12px;background:rgba(130,168,229,.13);color:#f6faff;font:700 1.2rem/1 system-ui,sans-serif;transition:background .2s,transform .2s}
+.qfs-gallery button:hover{background:rgba(146,201,242,.24);transform:translateY(-2px)}
+.qfs-gallery button:focus-visible,.qfs-gallery a:focus-visible{outline:3px solid #ffdc91;outline-offset:3px}
+.qfs-gallery-track{display:flex;gap:16px;width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scroll-padding-inline:4px;padding:5px 4px 19px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#778db4 transparent}
+.qfs-gallery-track:focus-visible{outline:2px solid var(--qfs-glow);outline-offset:-1px;border-radius:10px}
+.qfs-gallery-shot{flex:0 0 clamp(175px,22vw,234px);min-width:0;margin:0;scroll-snap-align:start;position:relative}
+.qfs-gallery-shot a{display:block;border-radius:18px;overflow:hidden;background:#090c1b;border:1px solid rgba(194,215,255,.27);box-shadow:0 12px 30px rgba(0,0,0,.3);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.qfs-gallery-shot a:hover{transform:translateY(-4px);box-shadow:0 18px 35px rgba(0,0,0,.4);border-color:var(--qfs-glow)}
+.qfs-gallery-shot img{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:linear-gradient(135deg,#122137,#0a0a18)}
+.qfs-gallery-shot figcaption{color:#d8e3f8;font-weight:670;font-size:.83rem;line-height:1.45;margin-top:11px;min-height:2.2em}
+.qfs-gallery-hint{color:#97aac6;font-size:.77rem;margin:4px 0 0;line-height:1.4}
+@media(max-width:720px){.qfs-gallery{padding:17px;margin:32px 0 42px;border-radius:19px}.qfs-gallery-track{gap:12px}.qfs-gallery-shot{flex-basis:clamp(164px,53vw,215px)}.qfs-gallery-top{align-items:flex-start}.qfs-gallery h2{font-size:1.5rem}}
+@media(prefers-reduced-motion:reduce){.qfs-gallery button,.qfs-gallery-shot a{transition:none!important;transform:none!important}.qfs-gallery-track{scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
@@ -48,9 +70,45 @@
       </section>
       <section id="features" aria-labelledby="features-title"><div class="section-title"><h2 id="features-title">Built for focused puzzle play</h2><p>Mahjong: Royal Tile Match combines classic tile-matching satisfaction with modern progression, optional reminders, helper tools, and clear visual feedback.</p></div><div class="grid features"><article class="card feature-card"><strong>Layered Mahjong-style boards</strong><p>Tiles are arranged in layered layouts where strategy matters: free sides, covered tiles, and smart pair selection shape every move.</p></article><article class="card feature-card"><strong>Daily Challenge</strong><p>A fresh daily puzzle flow gives players a simple reason to return and keep training their brain.</p></article><article class="card feature-card"><strong>Optional Daily reminders</strong><p>Enable local reminders if you want to know when a fresh Daily Challenge is ready.</p></article><article class="card feature-card"><strong>Hint and Shuffle tools</strong><p>Use helper tools when needed without losing the calm, logic-first feeling of Mahjong-style gameplay.</p></article><article class="card feature-card"><strong>Collection Album</strong><p>Unlock collectible cards from the same visual worlds used inside the game.</p></article><article class="card feature-card"><strong>Premium upgrade</strong><p>Premium may remove ads and unlock extra benefits depending on the current app version.</p></article></div></section>
       <section id="smart-assist" aria-labelledby="assist-title"><div class="wide"><article class="card assist-panel"><h2 id="assist-title">Smart Assist, only when you want it</h2><p>Smart Assist can help you understand blocked tiles and better moves. It can be turned ON or OFF anytime from gameplay controls or Settings.</p><ul class="mini-list"><li><span class="check">✓</span><span>Explains why a tile may be blocked.</span></li><li><span class="check">✓</span><span>Helps players learn Mahjong-style logic without constant interruption.</span></li><li><span class="check">✓</span><span>Optional by design, so experienced players can keep the board clean.</span></li></ul></article><article class="card privacy-card"><h2>Privacy-friendly play</h2><p class="privacy-note">Mahjong Solitaire: Tile Match does not require an account for core gameplay. Progress, settings, saved sessions, and optional reminder preferences may be stored locally on your device. The app may use Google services such as Firebase, AdMob, Google User Messaging Platform, and Google Play Billing for analytics, crash diagnostics, ads, consent handling, and Premium purchase handling, as described in the Privacy Policy.</p><div class="cta-row"><a class="button secondary" href="privacy.html">Read Privacy Policy</a><a class="button secondary" href="terms.html">Read Terms</a></div></article></div></section>
-      <section aria-labelledby="support-title"><div class="card support-card"><h2 id="support-title">Support</h2><p class="privacy-note">Need help with Mahjong: Royal Tile Match? Contact us by email and include your device model, Android version, app version, and a short description or screenshot of the issue.</p><div class="cta-row"><a class="button primary" href="mailto:flirtyquiz.contact@gmail.com">flirtyquiz.contact@gmail.com</a></div></div></section>
+      
+<section class="qfs-gallery" id="screenshots-mahjong" style="--qfs-glow:#f5cc84" aria-labelledby="screenshots-title-mahjong">
+ <div class="qfs-gallery-top">
+  <div><span class="qfs-gallery-label">Official Google Play screenshots</span>
+   <h2 id="screenshots-title-mahjong">Discover the board, modes and daily challenges</h2>
+   <p class="qfs-gallery-description">Official screenshots show the traditional tile-matching board, seven game modes, daily challenges and three difficulty options.</p>
+  </div>
+  <div class="qfs-gallery-controls" aria-label="Gallery navigation">
+   <button type="button" data-qfs-scroll="prev" aria-label="Scroll screenshots left">←</button>
+   <button type="button" data-qfs-scroll="next" aria-label="Scroll screenshots right">→</button>
+  </div>
+ </div>
+ <div class="qfs-gallery-track" role="group" aria-label="Four original Google Play screenshots" tabindex="0">
+  <figure class="qfs-gallery-shot"><a href="https://play-lh.googleusercontent.com/o8HUG6XV_tA-GtzXAUosT4Z0x0BTSAkrHrq9jbWREUL7bzudN3c5m2EqqV_UWdFzmz6jGxoz_hgMWEhV7sfQ=w526-h296" rel="noopener noreferrer" target="_blank" aria-label="Open full screenshot: Classic Mahjong"><img src="https://play-lh.googleusercontent.com/o8HUG6XV_tA-GtzXAUosT4Z0x0BTSAkrHrq9jbWREUL7bzudN3c5m2EqqV_UWdFzmz6jGxoz_hgMWEhV7sfQ=w526-h296" loading="lazy" decoding="async" alt="Classic Mahjong, official screenshot 1 of 4" width="234" height="416"></a><figcaption>Classic Mahjong</figcaption></figure>
+  <figure class="qfs-gallery-shot"><a href="https://play-lh.googleusercontent.com/XMObJ4dXSywbsrV_J_rYQddItg4XIULjMhU5EIm3VBVOzF04LU7qlZa8lXOVEQ_qENh-zTbl-V0U9itRhFiBlA=w526-h296" rel="noopener noreferrer" target="_blank" aria-label="Open full screenshot: Seven game modes"><img src="https://play-lh.googleusercontent.com/XMObJ4dXSywbsrV_J_rYQddItg4XIULjMhU5EIm3VBVOzF04LU7qlZa8lXOVEQ_qENh-zTbl-V0U9itRhFiBlA=w526-h296" loading="lazy" decoding="async" alt="Seven game modes, official screenshot 2 of 4" width="234" height="416"></a><figcaption>Seven game modes</figcaption></figure>
+  <figure class="qfs-gallery-shot"><a href="https://play-lh.googleusercontent.com/QOH6QeS9thxgK0TEWoKw92tbFkLEW-kYV92-I2pEua7DhrNg2HlW5f-tTQdG6wgM6Q6xnj3Z0Ndfv1utaVioCg=w526-h296" rel="noopener noreferrer" target="_blank" aria-label="Open full screenshot: Daily Mahjong challenge"><img src="https://play-lh.googleusercontent.com/QOH6QeS9thxgK0TEWoKw92tbFkLEW-kYV92-I2pEua7DhrNg2HlW5f-tTQdG6wgM6Q6xnj3Z0Ndfv1utaVioCg=w526-h296" loading="lazy" decoding="async" alt="Daily Mahjong challenge, official screenshot 3 of 4" width="234" height="416"></a><figcaption>Daily Mahjong challenge</figcaption></figure>
+  <figure class="qfs-gallery-shot"><a href="https://play-lh.googleusercontent.com/L66wkQctmz-MEyjLy7RkZRnSgGg3nP2ZO3QGpNaCqgodC9EOUbcCdUi8FmPWVfp42i5exTJ0HXOkuBjPl32A=w526-h296" rel="noopener noreferrer" target="_blank" aria-label="Open full screenshot: Three difficulty levels"><img src="https://play-lh.googleusercontent.com/L66wkQctmz-MEyjLy7RkZRnSgGg3nP2ZO3QGpNaCqgodC9EOUbcCdUi8FmPWVfp42i5exTJ0HXOkuBjPl32A=w526-h296" loading="lazy" decoding="async" alt="Three difficulty levels, official screenshot 4 of 4" width="234" height="416"></a><figcaption>Three difficulty levels</figcaption></figure>
+ </div>
+ <p class="qfs-gallery-hint">Swipe to explore more screenshots or use the arrows. Select a screenshot to view it separately.</p>
+</section>
+<section aria-labelledby="support-title"><div class="card support-card"><h2 id="support-title">Support</h2><p class="privacy-note">Need help with Mahjong: Royal Tile Match? Contact us by email and include your device model, Android version, app version, and a short description or screenshot of the issue.</p><div class="cta-row"><a class="button primary" href="mailto:flirtyquiz.contact@gmail.com">flirtyquiz.contact@gmail.com</a></div></div></section>
     </main>
     <footer class="footer"><div class="footer-card"><div>© 2026 Mahjong: Royal Tile Match. All rights reserved.</div><div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="mailto:flirtyquiz.contact@gmail.com">Support</a></div></div></footer>
   </div>
+
+<script>
+/* Clickable gallery arrows; touch swipes and keyboard scrolling also work. */
+document.querySelectorAll(".qfs-gallery").forEach(function(section){
+  var rail=section.querySelector(".qfs-gallery-track");
+  if(!rail)return;
+  var reduced=window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  section.querySelectorAll("[data-qfs-scroll]").forEach(function(button){
+    button.addEventListener("click",function(){
+      var direction=button.getAttribute("data-qfs-scroll")==="prev"?-1:1;
+      var width=rail.querySelector(".qfs-gallery-shot")?.getBoundingClientRect().width || 210;
+      rail.scrollBy({left:direction*(width+16)*2,behavior:reduced?"auto":"smooth"});
+    });
+  });
+});
+</script>
 </body>
 </html>
